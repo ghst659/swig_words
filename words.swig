@@ -8,30 +8,11 @@
 #include <vector>
 %}
 
-%include "typemaps.i"
+%include "cpointer.i"
 %include "stl.i"
-/*
-%include "std_string.i"
-%include "std_vector.i"
-*/
+namespace std {
+  %template(StringVector) vector<string>;
+}
+%pointer_functions(std::string, string_ptr);
 
-namespace words {
-
-  class Prefixer {
-  public:
-    Prefixer(const std::string&);
-    ~Prefixer();
-    Prefixer(const Prefixer&) = delete;
-    Prefixer& operator=(const Prefixer&) = delete;
-    void set_prefix(const std::string&);
-    std::string prefix() const;
-    std::string preview(const std::string&) const;
-    void modify_word(std::string* INOUT) const;
-    void modify_words(std::vector<std::string>* INOUT) const;
-  private:
-    std::string prefix_;
-  };
-
-  std::string one_shot(const std::string& prefix, std::string* INOUT);
-
-} // namespace words
+%include "words.h"

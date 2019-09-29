@@ -122,6 +122,127 @@ class SwigPyIterator(object):
 # Register SwigPyIterator in _words:
 _words.SwigPyIterator_swigregister(SwigPyIterator)
 
+class StringVector(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _words.StringVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _words.StringVector___nonzero__(self)
+
+    def __bool__(self):
+        return _words.StringVector___bool__(self)
+
+    def __len__(self):
+        return _words.StringVector___len__(self)
+
+    def __getslice__(self, i, j):
+        return _words.StringVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _words.StringVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _words.StringVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _words.StringVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _words.StringVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _words.StringVector___setitem__(self, *args)
+
+    def pop(self):
+        return _words.StringVector_pop(self)
+
+    def append(self, x):
+        return _words.StringVector_append(self, x)
+
+    def empty(self):
+        return _words.StringVector_empty(self)
+
+    def size(self):
+        return _words.StringVector_size(self)
+
+    def swap(self, v):
+        return _words.StringVector_swap(self, v)
+
+    def begin(self):
+        return _words.StringVector_begin(self)
+
+    def end(self):
+        return _words.StringVector_end(self)
+
+    def rbegin(self):
+        return _words.StringVector_rbegin(self)
+
+    def rend(self):
+        return _words.StringVector_rend(self)
+
+    def clear(self):
+        return _words.StringVector_clear(self)
+
+    def get_allocator(self):
+        return _words.StringVector_get_allocator(self)
+
+    def pop_back(self):
+        return _words.StringVector_pop_back(self)
+
+    def erase(self, *args):
+        return _words.StringVector_erase(self, *args)
+
+    def __init__(self, *args):
+        _words.StringVector_swiginit(self, _words.new_StringVector(*args))
+
+    def push_back(self, x):
+        return _words.StringVector_push_back(self, x)
+
+    def front(self):
+        return _words.StringVector_front(self)
+
+    def back(self):
+        return _words.StringVector_back(self)
+
+    def assign(self, n, x):
+        return _words.StringVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _words.StringVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _words.StringVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _words.StringVector_reserve(self, n)
+
+    def capacity(self):
+        return _words.StringVector_capacity(self)
+    __swig_destroy__ = _words.delete_StringVector
+
+# Register StringVector in _words:
+_words.StringVector_swigregister(StringVector)
+
+
+def new_string_ptr():
+    return _words.new_string_ptr()
+
+def copy_string_ptr(value):
+    return _words.copy_string_ptr(value)
+
+def delete_string_ptr(obj):
+    return _words.delete_string_ptr(obj)
+
+def string_ptr_assign(obj, value):
+    return _words.string_ptr_assign(obj, value)
+
+def string_ptr_value(obj):
+    return _words.string_ptr_value(obj)
 class Prefixer(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
@@ -139,17 +260,17 @@ class Prefixer(object):
     def preview(self, arg2):
         return _words.Prefixer_preview(self, arg2)
 
-    def modify_word(self, INOUT):
-        return _words.Prefixer_modify_word(self, INOUT)
+    def modify_word(self, arg2):
+        return _words.Prefixer_modify_word(self, arg2)
 
-    def modify_words(self, INOUT):
-        return _words.Prefixer_modify_words(self, INOUT)
+    def modify_words(self, arg2):
+        return _words.Prefixer_modify_words(self, arg2)
 
 # Register Prefixer in _words:
 _words.Prefixer_swigregister(Prefixer)
 
 
-def one_shot(prefix, INOUT):
-    return _words.one_shot(prefix, INOUT)
+def one_shot(prefix, word):
+    return _words.one_shot(prefix, word)
 
 
