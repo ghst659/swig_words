@@ -14,5 +14,6 @@ namespace std {
   %template(StringVector) vector<string>;
 }
 %pointer_functions(std::string, string_ptr);
+%pointer_class(std::string, MutableString);
 
 %include "words.h"

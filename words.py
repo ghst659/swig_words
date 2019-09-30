@@ -243,6 +243,33 @@ def string_ptr_assign(obj, value):
 
 def string_ptr_value(obj):
     return _words.string_ptr_value(obj)
+class MutableString(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        _words.MutableString_swiginit(self, _words.new_MutableString())
+    __swig_destroy__ = _words.delete_MutableString
+
+    def assign(self, value):
+        return _words.MutableString_assign(self, value)
+
+    def value(self):
+        return _words.MutableString_value(self)
+
+    def cast(self):
+        return _words.MutableString_cast(self)
+
+    @staticmethod
+    def frompointer(t):
+        return _words.MutableString_frompointer(t)
+
+# Register MutableString in _words:
+_words.MutableString_swigregister(MutableString)
+
+def MutableString_frompointer(t):
+    return _words.MutableString_frompointer(t)
+
 class Prefixer(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
